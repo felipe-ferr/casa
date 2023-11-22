@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <title>Casa</title>
+</head>
+
+<body onload="temperaturaQuarto()">
+    <div class="main-container">
+        <div class="casa-container">
+            <div class="quarto">
+                <p>Quarto</p>
+                <ion-icon id="bulb" name="bulb-outline"></ion-icon>
+                <div class="ac-container">
+                    <i class="material-symbols-outlined">heat_pump</i>
+                    <p><span id="temperatura-quarto"></span> C°</p>
+                </div>
+            </div>
+
+            <div class="sala">
+                <p>Sala</p>
+                <ion-icon name="bulb-outline"></ion-icon>
+            </div>
+        </div>
+       <div class="botoes-container">
+        <div class="botoes">
+            <a onclick="showcores()">Cor Lâmpada do Quarto</a>
+            <div id="quarto-cores" class="cores">
+                <div onclick="vermelho()" class="circulo-cor" style="background-color: red"></div>
+                <div onclick="verde()" class="circulo-cor" style="background-color: green"></div>
+                <div onclick="azul()" class="circulo-cor" style="background-color: royalblue"></div>
+                <div onclick="amarelo()" class="circulo-cor" style="background-color: gold"></div>
+                <ion-icon onclick="fecharcores()" id="fechar" name="close"></ion-icon>
+            </div>
+        </div>
+        <div class="botoes">
+            <a onclick="showac()">Temperatura Ar Condicionado</a>
+            <div id="ac-quarto" class="number-input">
+                <button type="button"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepDown();temperaturaQuarto()"onkeyup="temp"><i
+                        class="material-symbols-outlined">do_not_disturb_on</i></button>
+                <input onkeyup="temperaturaQuarto()" id="temp-ac-quarto" class="quantity" min="0" value="21"
+                    type="number">
+
+                <button type="button"
+                    onclick="this.parentNode.querySelector('input[type=number]').stepUp();temperaturaQuarto()"
+                    class="plus"><i class="material-symbols-outlined">add_circle</i></button>  
+                    
+                    <ion-icon onclick="fecharac()" id="fechar" name="close"></ion-icon>
+            </div>
+        
+        </div>
+       </div>
+
+
+        <script src="mudarcorlampada.js"></script>
+        <script src="showcores.js"></script>
+        <script src="showac.js"></script>
+        <script src="temperaturaQuarto.js"></script>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

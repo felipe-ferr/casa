@@ -1,0 +1,178 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+:root{
+    --cor-lampada: grey;
+    --cor-fundo-quarto: transparent;
+}
+body{
+    margin: 0;
+}
+.main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1vh;
+}
+.main-container a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh;
+    background-color: rgb(20, 20, 20);
+    color: whitesmoke;
+    font-family: 'Poppins',sans-serif;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+}
+.cores{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 15vw;
+    background-color: rgb(197, 197, 197);
+    box-sizing: border-box;
+    padding: 2vh;
+    border-radius: 10px;
+    display: none;
+    cursor: pointer;
+
+}
+.circulo-cor{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: black;
+}
+.casa-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    box-sizing: border-box;
+    padding: 4vh;
+}
+.casa-container p{
+    font-family: 'Poppins',sans-serif;
+    color: grey;
+    font-size: 2vw;
+    margin: 0;
+}
+.quarto{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    border-top: 3px solid black;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    background-color: var(--cor-fundo-quarto);
+    transition-duration: 0.4s;
+}
+.quarto ion-icon{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    color: var(--cor-lampada);
+    font-size: 2vw;
+    margin: 0;
+    right: 5%;
+}
+.quarto .ac-container{
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.quarto .ac-container p{
+    font-size: 1vw;
+}
+.quarto i{
+    font-size: 3vw;
+}
+.material-symbols-outlined{
+    font-family: 'Poppins',sans-serif;
+    color: grey;
+}
+.sala{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    width: 100%;
+    border: 3px solid black;
+
+}
+.sala ion-icon{
+    position: absolute;
+    font-family: 'Poppins',sans-serif;
+    color: grey;
+    font-size: 2vw;
+    margin: 0;
+    right: 5%;
+    bottom: 5%
+}
+.botoes-container{
+    display: flex;
+    align-items: first baseline;
+    justify-content: center;
+    width: 50%;
+    gap: 5vw;
+}
+.botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2vh;
+    width: 100%;
+}
+#ac-quarto{
+    display: none;
+}
+
+.number-input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+    -moz-appearance: textfield;
+    appearance: textfield;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+
+.number-input,
+.number-input * {
+    box-sizing: border-box;
+}
+.number-input input[type="number"] {
+    width: 15%;
+    border: none;
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    font-weight: 700;
+  
+  }
+.number-input button{
+    border: none;
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vh;
+    border-radius: 50%;
+}
